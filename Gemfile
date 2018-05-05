@@ -53,6 +53,7 @@ group :development do
 
   gem 'capistrano-rails'
   gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-puma'
 end
 
 group :test do

@@ -41,3 +41,15 @@ set :linked_dirs, fetch(:linked_dirs, []).concat(%w{log tmp/pids tmp/cache tmp/s
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+
+namespace :deploy do
+  desc 'Restart application'
+  task :restart do
+    on roles(:app) do
+      execute "#{fetch(:rbenv_prefix)} pumactl -P ~/projects/block/current/tmp/pids/puma.pid phased-restart"
+    end
+  end
+end
+
+after 'deploy:publishing', 'deploy:restart'
