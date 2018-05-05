@@ -8,6 +8,14 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 
+set :stage, :production # this defines production stage for deployment
+
+set :branch, 'master'
+
+role :app, %w(deployer@192.168.0.108)
+role :web, %w(deployer@192.168.0.108)
+role :db,  %w(deployer@192.168.0.108)
+
 
 # role-based syntax
 # ==================

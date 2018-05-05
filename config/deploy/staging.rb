@@ -8,7 +8,7 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 
-set :stage, :development # this defines production stage for deployment
+set :stage, :staging # this defines production stage for deployment
 
 set :branch, 'master'
 
