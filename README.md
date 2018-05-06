@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+[![Build Status](https://travis-ci.com/morgan2013/block.svg?branch=master)](https://travis-ci.com/morgan2013/block)
